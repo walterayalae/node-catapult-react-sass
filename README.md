@@ -1,12 +1,14 @@
 # Node Catapult - React - SASS
 
-A React and SASS fork of [mindeavor](https://github.com/mindeavor)'s boilerplate starter project [node-catapult](https://github.com/mindeavor/node-catapult).
+A React and SASS enhanced fork of [mindeavor](https://github.com/mindeavor)'s boilerplate starter project: [node-catapult](https://github.com/mindeavor/node-catapult).
 
 Use as a minimal starting point for rapidly building React apps.
 
 Please see the original project for a lot of great documentation on rapidly building node/express apps with the boilerplate.
 
 ## Getting Started
+
+Usage remains the same as the original project:
 
 ```
 $ git clone https://github.com/no-fi/node-catapult-react-sass my-project
@@ -19,7 +21,7 @@ Now visit [localhost:4000](http://localhost:4000/)
 
 ### Running the Tests
 
-Node Catapult - React - SASS expands upon the Node Catapult's basic test framework by including Enzyme for front-end React tests.
+Node Catapult - React - SASS expands upon Node Catapult's basic test framework by including Enzyme for front-end React tests.
 
 Client tests should be placed in `test/client` and server tests should be placed in `test/server`.
 
@@ -37,4 +39,4 @@ To use, simply place .sass, .css, or .scss files in the sass directory. They can
 
 Like the original project, Node Catapult - React - SASS relies on [browserify-middleware](https://github.com/ForbesLindesay/browserify-middleware).
 
-Browserify-middleware is used to babelify, bundle, and compile all code and stylesheets into a single app-bundle.js file for inclusion in index.html.
+Browserify-Middleware is used to babelify, bundle, and compile all code and stylesheets into a single app-bundle.js file for inclusion in index.html.
