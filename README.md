@@ -1,15 +1,15 @@
-# Node Catapult
+# Node Catapult - React - SASS
 
-A boilerplate starter project that includes Node, Express, Browserify, and Mithril:
+A React and SASS fork of [mindeavor](https://github.com/mindeavor)'s boilerplate starter project [node-catapult](https://github.com/mindeavor/node-catapult).
 
-* Minimal - Understand everything.
-* Efficient - Great defaults for development and production.
-* Rapid - Get started immediately.
+Use as a minimal starting point for rapidly building React apps.
+
+Please see the original project for a lot of great documentation on rapidly building node/express apps with the boilerplate.
 
 ## Getting Started
 
 ```
-$ git clone https://github.com/mindeavor/node-catapult my-project
+$ git clone https://github.com/no-fi/node-catapult-react-sass my-project
 $ cd my-project
 $ npm install
 $ npm start
@@ -19,18 +19,22 @@ Now visit [localhost:4000](http://localhost:4000/)
 
 ### Running the Tests
 
-There is a basic test framework in your `test/` folder. To run the tests, simply run `npm test`.
+Node Catapult - React - SASS expands upon the Node Catapult's basic test framework by including Enzyme for front-end React tests.
 
-## Jump-starting your App
+Client tests should be placed in `test/client` and server tests should be placed in `test/server`.
 
-[Check the wiki](https://github.com/mindeavor/node-catapult/wiki) for snippets to jump-start your app, including:
+To run all tests, simply run `npm test`.
 
-- Support for SASS and Babel
-- How to set up React.js
-- Express cookie sessions
-- Postgres and knex.js
-- A functional-programming-based "ORM" pattern for your database models
+Additionally, you can run just client-side tests with `npm run test_client` or just server-side tests with `npm run test_server`.
 
-## Browserify Middleware
+### Using SASS
 
-The most notable part of this app is [browserify-middleware](https://github.com/ForbesLindesay/browserify-middleware). Great node packages are exceedingly rare – this is one of those packages.
+Node Catapult - React - SASS uses scssify to bundle all .sass, .css, and .scss files. All client-side code and stylesheets are packaged into a single app-bundle.js file.
+
+To use, simply place .sass, .css, or .scss files in the sass directory. They can then be imported into app.sass for automatic inclusion.
+
+## Browserify-Middleware
+
+Like the original project, Node Catapult - React - SASS relies on [browserify-middleware](https://github.com/ForbesLindesay/browserify-middleware).
+
+Browserify-middleware is used to babelify, bundle, and compile all code and stylesheets into a single app-bundle.js file for inclusion in index.html.
