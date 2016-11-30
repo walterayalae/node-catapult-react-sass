@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MyComponent from './components/MyComponent';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import Main from './components/Main';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
+injectTapEventPlugin();
 // Import compiled SASS
 require('./sass/app.sass');
 
-ReactDOM.render(<MyComponent title="Welcome to my app!" />, window.document.getElementById('app'));
+ReactDOM.render(<Main />, window.document.getElementById('app'));

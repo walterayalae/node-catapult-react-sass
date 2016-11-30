@@ -1,6 +1,6 @@
-var browserify = require('browserify-middleware')
-var express = require('express')
-var Path = require('path')
+var browserify = require('browserify-middleware');
+var express = require('express');
+var Path = require('path');
 
 var routes = express.Router()
 
@@ -28,6 +28,15 @@ var assetFolder = Path.resolve(__dirname, '../client/public')
 routes.use(express.static(assetFolder))
 
 
+
+
+
+
+
+
+
+
+
 if (process.env.NODE_ENV !== 'test') {
   //
   // The Catch-all Route
@@ -35,27 +44,27 @@ if (process.env.NODE_ENV !== 'test') {
   // NOTE: Make sure this route is always LAST.
   //
   routes.get('/*', function(req, res){
-    res.sendFile( assetFolder + '/index.html' )
-  })
+    res.sendFile( assetFolder + '/index.html' );
+  });
 
   //
   // We're in development or production mode;
   // create and run a real server.
   //
-  var app = express()
+  var app = express();
 
   // Parse incoming request bodies as JSON
-  app.use( require('body-parser').json() )
+  app.use( require('body-parser').json() );
 
   // Mount our main router
-  app.use('/', routes)
+  app.use('/', routes);
 
   // Start the server!
   var port = process.env.PORT || 4000
-  app.listen(port)
-  console.log("Listening on port", port)
+  app.listen(port);
+  console.log("Listening on port", port);
 }
 else {
   // We're in test mode; make this file importable instead.
-  module.exports = routes
+  module.exports = routes;
 }
